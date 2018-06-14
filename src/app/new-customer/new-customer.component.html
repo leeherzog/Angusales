@@ -1,0 +1,28 @@
+<div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="First Name" [(ngModel)]="firstName">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Last Name" [(ngModel)]="lastName"></textarea>
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field>
+        <textarea matInput placeholder="Company" [(ngModel)]="company"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+        <textarea matInput placeholder="E-mail" [(ngModel)]="email"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Phone" [(ngModel)]="phone"></textarea>
+    </mat-form-field>
+
+<br>
+    <button mat-button (click) = "submitCustomer()">Submit Customer Information</button>
+  </div>

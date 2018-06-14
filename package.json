@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng build --watch\" \"nodemon server.js\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,16 +13,22 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.1",
+    "@angular/cdk": "^6.2.1",
     "@angular/common": "^6.0.0-rc.1",
     "@angular/compiler": "^6.0.0-rc.1",
     "@angular/core": "^6.0.0-rc.1",
     "@angular/forms": "^6.0.0-rc.1",
     "@angular/http": "^6.0.0-rc.1",
+    "@angular/material": "^6.2.1",
     "@angular/platform-browser": "^6.0.0-rc.1",
     "@angular/platform-browser-dynamic": "^6.0.0-rc.1",
     "@angular/router": "^6.0.0-rc.1",
+    "concurrently": "^3.5.1",
     "core-js": "^2.5.4",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.5",
     "rxjs": "^6.0.0-rc.0",
+    "sequelize": "^4.37.10",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
