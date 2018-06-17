@@ -1,4 +1,5 @@
 <button mat-button color="accent" class="add" [routerLink]="['newCustomer']">(+) Add Customer</button>
+<button mat-button color="accent" class="add" (click) = "excel()">Export to Excel</button>
 
 <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">

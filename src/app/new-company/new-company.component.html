@@ -1,0 +1,25 @@
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="ID Number" [(ngModel)]="id">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Company Name" [(ngModel)]="name"></textarea>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+      <textarea matInput placeholder="Address" [(ngModel)]="address"></textarea>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+      <textarea matInput placeholder="Country" [(ngModel)]="country"></textarea>
+  </mat-form-field>
+  <br>
+
+<br>
+  <button mat-button [routerLink]="['/companies']" (click) = "submitCompany()">Submit Company Information</button>
+</div>
+

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import {MatTableDataSource} from '@angular/material';
 import { CustomersService } from '../table.service';
+import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 
 @Component({
   selector: 'app-costumers',
@@ -34,6 +35,17 @@ deleteCustomer(customer){
   this.customersService.removeCustomer(customer);
 }
  
+excel() {
+  var options = { 
+    fieldSeparator: ',',
+    quoteStrings: '"',
+    decimalseparator: '.',
+    showLabels: true, 
+    showTitle: true,
+    useBom: true,
+    noDownload: false,
+    headers: ["First Name", "Last Name", "Company", "Email", "Phone"]};
+   new Angular5Csv(this.table, 'My Report', options);
+  }
+
 }
-
-

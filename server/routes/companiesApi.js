@@ -11,5 +11,22 @@ router.get('/', (req, res) => {
  });
 })
 
+router.post('/', (req, res) => {
+  Companies.create(req.body).then(anotherTask => {
+    Companies.findAll().then((data) => {
+      res.send(JSON.stringify(data));
+    }, (err) => {
+      console.error(err)
+    })})
+})
+
+router.delete('/:id', (req, res) => {
+  Companies.destroy({where: {id: req.params.id}}).then(anotherTask => {
+    Companies.findAll().then((data) => {
+      res.send(JSON.stringify(data));
+    }, (err) => {
+      console.error(err)
+    })})
+})
 
 module.exports = router

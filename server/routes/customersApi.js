@@ -3,10 +3,6 @@ const router = express.Router()
 const Customers = require('../../DataAccess/customerModel').Customers;
 const Companies = require('../../DataAccess/companiesModel').Companies;
 
-router.get('/about', (req, res) => {
-  res.send('about');
-})
-
 router.get('/', (req, res) => {
   Customers.findAll({
     include: [{
@@ -32,7 +28,7 @@ router.post('/', (req, res) => {
       res.send(JSON.stringify(data));
     }, (err) => {
       console.error(err)
-    })})
+      })})
 })
 
 router.delete('/:email', (req, res) => {

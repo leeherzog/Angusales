@@ -22,6 +22,9 @@ import { CostumersComponent } from './costumers/costumers.component';
 
 import {AppRoutingModule} from './/app-routing.module';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { CompanyService } from './company.service';
+import { NewCompanyComponent } from './new-company/new-company.component';
 
 
 
@@ -30,7 +33,9 @@ import { NewCustomerComponent } from './new-customer/new-customer.component';
     AppComponent,
     TableComponent,
     CostumersComponent,
-    NewCustomerComponent
+    NewCustomerComponent,
+    CompaniesComponent,
+    NewCompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,7 @@ import { NewCustomerComponent } from './new-customer/new-customer.component';
     MatFormFieldModule,
     AppRoutingModule
   ],
-  providers: [CustomersService],
+  providers: [CustomersService, CompanyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
